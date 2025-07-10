@@ -1,0 +1,138 @@
+/* Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #1c1c1c;
+  color: #ffffff;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+header {
+  background-color: #ff3c3c;
+  padding: 1rem;
+  width: 100%;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 2rem;
+  color: #fff;
+}
+
+main {
+  width: 90%;
+  max-width: 800px;
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#searchInput {
+  width: 70%;
+  padding: 0.8rem;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+#searchbtn {
+  padding: 0.8rem 1.5rem;
+  background-color: #ff3c3c;
+  border: none;
+  color: white;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#searchbtn:hover {
+  background-color: #e62e2e;
+}
+
+/* Movie container */
+#listmovie {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 900px;
+  margin-top: 30px;
+}
+
+/* Poster styling */
+.movie-poster img {
+  max-width: 100%;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Movie info */
+.movie-info {
+  background-color: #1f1f1f;
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 20px;
+  width: 100%;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.movie-info h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.movie-info p {
+  margin: 5px 0;
+}
+
+.movie-genre {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 10px 0;
+}
+
+.movie-genre p {
+  background-color: #ff3c3c;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+}
+
+/* Error message */
+.error {
+  color: #ff3c3c;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+/* Responsive adjustments */
+@media (min-width: 768px) {
+  #listmovie {
+    flex-direction: row;
+    gap: 30px;
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+  .movie-poster,
+  .movie-info {
+    flex: 1;
+  }
+
+  .movie-poster img {
+    max-height: 500px;
+    object-fit: cover;
+  }
+}
